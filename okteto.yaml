@@ -32,6 +32,9 @@ deploy:
   - name: Deploy API
     command: helm upgrade --install api api/chart --set image=${OKTETO_BUILD_API_IMAGE} --set load=${API_LOAD_DATA:-true}
 
+destroy:
+  - sleep 200
+
 dev:
   frontend:
     image: okteto/node:20
