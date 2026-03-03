@@ -14,7 +14,7 @@ jobs:
         url: ${{ secrets.OKTETO_URL }}
 
     - name: Deploy preview environment
-      uses: okteto/deploy-preview@latest
+      uses: okteto/deploy-preview@jlo/update-ruby4-golang125
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run end to end tests
-      uses: okteto/test@latest
+      uses: okteto/test@jlo/update-ruby4-golang125
       with:
         tests: e2e
         namespace: pr-${{ github.event.number }}-cindylopez
