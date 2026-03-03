@@ -1,0 +1,19 @@
+// Ignore all other files and folders
+**
+
+// Synch chart folders
+!api/chart
+!catalog/chart
+!frontend/chart
+!kafka
+!mongodb
+!postgresql
+!rent/chart
+!worker/chart
+
+
+[test]
+!tests/tests/main.spec.js
+!tests/tests/Dockerfile
+!tests/tests/package.json
+!tests/tests/playwright.config.js
